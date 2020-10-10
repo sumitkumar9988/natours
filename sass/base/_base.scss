@@ -1,0 +1,41 @@
+
+html{
+    font-size:62.5%;
+
+    // 0-600px phone 
+    // 600-900px tablet 
+    // 900-1200 tablet landscape
+    // 1200-1800 desktop style
+    // 1800 destop style
+
+    @include respond(tab-land)
+    {
+        font-size:56.25%;
+    }
+    @include respond(tab-port){
+        font-size:50%;
+    }
+
+    @include respond(big-destop)
+    {
+        font-size:75%;
+    }
+}
+
+body
+{
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
